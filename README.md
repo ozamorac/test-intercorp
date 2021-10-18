@@ -3,7 +3,7 @@ Reto Intercorp
 
 Proyecto creado para el reto Intercorp:
   
-  Repositorio: 
+  Repositorio: https://github.com/ozamorac/test-intercorp.git
   
   Site Deploy: HEROKU
   
