@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS cliente ;
+
+CREATE TABLE cliente  (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(50) NOT NULL,
+  Apellido VARCHAR(50) NOT NULL,
+  Edad INT NOT NULL,
+  Fecha_Nacimiento Date NOT NULL
+);
