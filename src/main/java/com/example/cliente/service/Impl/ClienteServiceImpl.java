@@ -45,24 +45,10 @@ public class ClienteServiceImpl implements ClienteService {
 		
 		List<Cliente> clienteList = null;
 		BigDecimal std = new BigDecimal(0);
-		BigDecimal mean = new BigDecimal(0);
-		Integer sumAge = 0;
-		Integer countAge = 0;
-		sumAge = clienteRepository.sumAge();
-		countAge = clienteRepository.countAge();
-		mean = BigDecimal.valueOf(sumAge).divide(BigDecimal.valueOf(countAge));
-		
 		clienteList = clienteRepository.findAll();
-		double stdInput = 0;
-		double stdSum = 0;
-		for (Cliente cliente : clienteList) {
-			stdInput = BigDecimal.valueOf(cliente.getEdad()).subtract(mean).doubleValue();
-			stdSum += Math.pow(stdInput,2);
-		}
 		if (clienteList.size()==1) {
 			return std;
 		}
-		//std = BigDecimal.valueOf(stdSum).divide(BigDecimal.valueOf(countAge));
 		std = BigDecimal.valueOf(clienteRepository.std());
 		
 		return std;
